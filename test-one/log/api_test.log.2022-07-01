@@ -1,0 +1,6 @@
+2022-07-01 14:27:03,322 INFO [werkzeug] [_internal.py _log:225] - [ * Restarting with stat]
+2022-07-01 14:27:03,954 WARNING [werkzeug] [_internal.py _log:225] - [ * Debugger is active!]
+2022-07-01 14:27:03,967 INFO [werkzeug] [_internal.py _log:225] - [ * Debugger PIN: 159-428-450]
+2022-07-01 14:27:04,018 INFO [werkzeug] [_internal.py _log:225] - [ * Running on http://127.0.0.1:6000/ (Press CTRL+C to quit)]
+2022-07-01 14:27:48,258 INFO [root] [flask_test.py index:16] - [{'code': 200}]
+2022-07-01 14:27:48,259 INFO [werkzeug] [_internal.py _log:225] - [127.0.0.1 - - [01/Jul/2022 14:27:48] "GET /auth/index HTTP/1.1" 200 -]

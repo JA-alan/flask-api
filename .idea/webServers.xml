@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9d2d47f5-f0c9-41ae-ba75-ebb8661c188b" name="flask" url="http://43.138.182.131">
+        <fileTransfer accessType="SFTP" host="43.138.182.131" port="22" sshConfigId="cf9cee8f-2b06-4b32-8071-70031056cd0f" sshConfig="root@43.138.182.131:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,5 @@
+2022-07-13 15:34:53,526 INFO [werkzeug] [_internal.py _log:225] - [ * Restarting with stat]
+2022-07-13 15:34:55,217 INFO [werkzeug] [_internal.py _log:225] - [ * Restarting with stat]
+2022-07-13 15:34:56,038 WARNING [werkzeug] [_internal.py _log:225] - [ * Debugger is active!]
+2022-07-13 15:34:56,054 INFO [werkzeug] [_internal.py _log:225] - [ * Debugger PIN: 159-428-450]
+2022-07-13 15:34:56,126 INFO [werkzeug] [_internal.py _log:225] - [ * Running on http://127.0.0.1:6000/ (Press CTRL+C to quit)]
