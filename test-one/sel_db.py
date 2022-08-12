@@ -259,8 +259,8 @@ class Select_Sql(object):
 
             user_dict = [user_data, user_article, user_msg]
             return user_dict
-        except Exception as e:
-            return e
+        except Exception as error:
+            return error
 
         finally:
             self.cursor.close()
