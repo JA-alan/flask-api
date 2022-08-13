@@ -2,7 +2,7 @@ import datetime
 import json
 import logging
 from flask import request, jsonify, make_response, Response, Blueprint
-from global_setting import inset_token
+from global_setting import inset_token, initialization_token
 from update_db import Update_Sql
 from sel_db import Select_Sql
 from inset_db import Inset_Sql
@@ -95,7 +95,6 @@ def login():  # 登录
             }
             now_token = return_dict["token"]
             Inset_Sql().token_data(now_token, name)
-            #  initialization_token(name)  # TODO 定时清空TOKEN
             #  Del_SQL().data_delete(name)
             if return_dict["data"] == {"code": 402, "result": "账号或密码错误"}:
                 return {"code": 402, "result": "账号或密码错误"}
@@ -138,8 +137,6 @@ def login():  # 登录
             }
             now_token = return_dict["token"]
             Inset_Sql().token_data(now_token, name)
-            #  initialization_token(name)  # TODO 定时清空TOKEN
-            #  Del_SQL().data_delete(name)
             if return_dict["data"] == {'code': '402', 'result': '账号或密码错误'}:
                 return {"code": 402, "result": "账号或密码错误"}
             return jsonify(return_dict)

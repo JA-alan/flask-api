@@ -1,4 +1,5 @@
 import hashlib
+import threading
 import time
 import datetime
 import json
@@ -86,16 +87,20 @@ def dojob():
     scheduler.start()
 
 
-def initialization_token(name):
-    list = [name]
-    name = list[0]
-    flag = 0
-    while flag < 2:
-        flag += 1
-        print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), "第%s次" % flag)
-        t = Timer(10, initialization_token)
-        t.start()
-        Update_Sql().logout_del_token(name)
+class token_del:
+    """
+    定时器
+    run:100秒执行一次定时器
+    """
+    def __init__(self):
+        t1 = threading.Timer(1, function=self.run)  # 创建定时器
+        t1.start()  # 开始执行线程
+
+    def run(self):  # 定义方法
+        print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))  # 输出当前时间
+        timer = threading.Timer(100, self.run)  # 每秒运行
+        timer.start()  # 执行方法
+        Update_Sql().time_del_token()
 
 
 def random_phone():

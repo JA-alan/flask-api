@@ -139,7 +139,6 @@ def login():  # 登录
 
             now_token = return_dict["token"]
             DB_SQL().token_data(now_token, name)
-            initialization_token(name)  # TODO 定时清空TOKEN
             if return_dict["data"] == {"code": 402, "result": "账号或密码错误"}:
                 return {"code": 402, "result": "账号或密码错误"}
             return json.dumps(return_dict, ensure_ascii=False)
